@@ -1,0 +1,24 @@
+version: 2
+
+models:
+
+  - name: stg_addresses
+    description: information about user addreses
+
+  - name: stg_events
+    description: events within each user session
+
+  - name: stg_orders
+    description: order information
+
+  - name: stg_order_items
+    description: order quantity
+
+  - name: stg_products
+    description: product information for each order
+    
+  - name: stg_promos
+    description: promotion information
+
+  - name: stg_users
+    description: information about each user
