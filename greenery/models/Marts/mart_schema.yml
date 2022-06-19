@@ -1,0 +1,39 @@
+version: 2
+
+models:
+
+  - name: dim_users
+    description: user table with addresses 
+    columns:
+    - name: user_id
+      tests:
+        - unique
+        - not_null
+  - name: fct_sess
+    description: sessions that evaluate the user journey
+    columns:
+    - name: session_id
+      tests:
+        - unique
+        - not_null
+    - name: user_id
+      tests:
+        - not_null
+  
+  - name: fct_users_order
+    description: information about users first order date, last order date, total spend, and average order value 
+    columns:
+    - name: user_id
+      tests:
+        - unique
+        - not_null 
+  - name: fct_order_product
+    description: information at the order level about product performance on quantity and price
+    columns:
+    - name: order_id
+      tests:
+        - not_null
+    - name: order_quantity
+      tests:
+        - not_null
+        - positive_values
