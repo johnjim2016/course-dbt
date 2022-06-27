@@ -37,3 +37,10 @@ models:
       tests:
         - not_null
         - positive_values
+  - name: fct_session
+    description: sessions that evaluate the user journey
+    columns:
+    - name: session_id
+      tests:
+        - unique
+        - not_null
