@@ -44,3 +44,5 @@ models:
       tests:
         - unique
         - not_null
+  - name: fct_product_funnel
+    description: conversion by stage in conversion funnel by week
